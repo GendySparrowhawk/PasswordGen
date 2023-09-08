@@ -1,32 +1,33 @@
 var generateBtn = document.querySelector("#generate");
+
 var lowercase = 'abcdefghijklmnopqrstuvwxyz';
 var uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var numbers = '012345689';
 var specials = '~!@#$%^&*?';
 var combined = '';
 var password = '';
-var wantslowercase = confirm('Do you want lowercase letters?');
-var wantsuppercase = confirm('Do you want uppercase?');
-var wantsnumbers = confirm('Do you want numbers?');
-var wantsspecials = confirm('Do you want special characters?');
+var lovelowercase = confirm('Do you want lowercase letters?');
+var loveuppercase = confirm('Do you want uppercase?');
+var lovenumbers = confirm('Do you want numbers?');
+var lovespecials = confirm('Do you want special characters?');
 
 var passwordLength = prompt('How many characters would you like in your password?');
 
-if (wantslowercase) {
+if (lovelowercase) {
   combined += lowercase;
 }
-if (wantsuppercase) {
+if (loveuppercase) {
   combined += uppercase;
 }
-if (wantsnumbers) {
+if (lovenumbers) {
   combined += numbers;
 }
-if (wantsspecials) {
+if (lovespecials) {
   combined += specials;
 }
 
 if (passwordLength.length < 1) {
-  alert('you must enter a number');
+  alert('you must enter at least one number');
   var passwordLength = prompt('How many characters would you like in your password?');
 }
 if (isNaN(passwordLength)) {
